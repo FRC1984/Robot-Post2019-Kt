@@ -11,16 +11,16 @@ import frc.team1984.robot.RobotMap
 
 object Drivetrain: Jawasystem() {
 
-    private val leftSide = SpeedControllerGroup(CANSparkMax(1, CANSparkMaxLowLevel.MotorType.kBrushless),
-                                                CANSparkMax(2, CANSparkMaxLowLevel.MotorType.kBrushless))
-    private val rightSide = SpeedControllerGroup(CANSparkMax(3, CANSparkMaxLowLevel.MotorType.kBrushless),
-                                                 CANSparkMax(4, CANSparkMaxLowLevel.MotorType.kBrushless))
+    private val leftSide = SpeedControllerGroup(CANSparkMax(RobotMap.L1_SPMAX_ID, CANSparkMaxLowLevel.MotorType.kBrushless),
+                                                CANSparkMax(RobotMap.L2_SPMAX_ID, CANSparkMaxLowLevel.MotorType.kBrushless))
+    private val rightSide = SpeedControllerGroup(CANSparkMax(RobotMap.R1_SPMAX_ID, CANSparkMaxLowLevel.MotorType.kBrushless),
+                                                 CANSparkMax(RobotMap.R2_SPMAX_ID, CANSparkMaxLowLevel.MotorType.kBrushless))
     private val drive = DifferentialDrive(leftSide,
-            rightSide)
+                                          rightSide)
 
-    private val shifter = Solenoid(RobotMap.SHIFTER_SOLENOID)
+    private val shifter = Solenoid(RobotMap.SHIFTER_SOLENOID) // True = High Gear, False = Low Gear :)
 
-    private val dtVals = DriveConsts.kDTVals
+    private val dtVals = DriveConsts.kDTVals // For Pathfinder at some point
 
     init {
         //TODO: init motorcontrollers properties, Shuffleboard
@@ -29,7 +29,7 @@ object Drivetrain: Jawasystem() {
 
     override fun initDefaultCommand() {
         //TODO: Shuffleboard chooser for Arcade vs. Curvature :)
-        defaultCommand = ArcadeDriveCmd({ OI.Con1.getLSY() }, { OI.Con1.getRSX() })
+        defaultCommand = ArcadeDriveCmd({ OI.Con1.LSY }, { OI.Con1.RSX })
     }
 
     override fun reset() {

@@ -24,7 +24,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Siw08qawIVY7UpUhMQ9MhThPno" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -37,8 +37,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
-      <recent name="frc.team1984.robot.belt" />
       <recent name="frc.team1984.robot.intake" />
+      <recent name="frc.team1984.robot.belt" />
       <recent name="frc.team1984.robot.drivetrain" />
       <recent name="frc.team1984.robot.hatchgrabber" />
       <recent name="frc.team1984.robot" />
@@ -102,5 +102,16 @@
       <updated>1572038697705</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

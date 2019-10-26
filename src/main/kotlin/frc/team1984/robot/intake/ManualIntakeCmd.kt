@@ -1,4 +1,4 @@
-package frc.team1984.robot.ramp
+package frc.team1984.robot.intake
 
 import edu.wpi.first.wpilibj.command.Command
 import frc.team1984.robot.OI
@@ -11,7 +11,7 @@ class ManualIntakeCmd : Command() {
     }
 
     override fun execute() {
-        Intake.set(OI.Con2.getLSY(), OI.Con2.getRSY())
+        Intake.set(OI.Con2.LSY, OI.Con2.RSY)
     }
 
     override fun isFinished() = false

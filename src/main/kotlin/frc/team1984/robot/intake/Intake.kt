@@ -7,7 +7,6 @@ import frc.team1984.lib.Jawasystem
 import frc.team1984.robot.Robot.Companion.scoreTarget
 import frc.team1984.robot.RobotMap
 import frc.team1984.robot.ScoreTarget
-import frc.team1984.robot.ramp.ManualIntakeCmd
 
 object Intake : Jawasystem() {
     val outerSpark = Spark(RobotMap.OUTER_INTAKE_PORT)

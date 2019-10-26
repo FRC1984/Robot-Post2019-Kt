@@ -40,8 +40,13 @@ class JawaXboxController(port: Int) : XboxController(port) {
     fun getAxis(axis: XboxMap.Axis, inverted: Boolean = false) =
             applyDeadband(this.getRawAxis(axis.id) * if (inverted) -1 else 1, XboxMap.DEAD_BAND)
 
-    fun getLSX(): Double = this.getRawAxis(XboxMap.Axis.LEFT_X.id)
-    fun getLSY(): Double = this.getRawAxis(XboxMap.Axis.LEFT_Y.id)
-    fun getRSX(): Double = this.getRawAxis(XboxMap.Axis.RIGHT_X.id)
-    fun getRSY(): Double = this.getRawAxis(XboxMap.Axis.RIGHT_Y.id)
+    //Axis
+    val LSX: Double
+        get() = this.getRawAxis(XboxMap.Axis.LEFT_X.id)
+    val LSY: Double
+        get() = this.getRawAxis(XboxMap.Axis.LEFT_Y.id)
+    val RSX: Double
+        get() = this.getRawAxis(XboxMap.Axis.RIGHT_X.id)
+    val RSY: Double
+        get() = this.getRawAxis(XboxMap.Axis.RIGHT_Y.id)
 }
